@@ -1,5 +1,5 @@
 # Face-Recognition
-This repository is composed to 3 main sub-projects: FaceNet Notebook, Liveliness Net &amp; Real Time Face Recognition.
+FaceNet Notebook using inception network for encoding. 
 
 # FaceNet
 FaceNet learns a neural network that encodes a face image into a vector of 128 numbers. 
