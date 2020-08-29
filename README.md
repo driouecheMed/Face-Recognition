@@ -9,5 +9,5 @@ By comparing two such vectors, you can then determine if two pictures are of the
 
 **Loss**: Triplet loss
 
-<img src="FaceNet Notebook/images/distance_kiank.png" style="width:680px;height:250px;">
+<img src="FaceNet_Notebook/images/distance_kiank.png" style="width:680px;height:250px;">
 
