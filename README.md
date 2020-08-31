@@ -22,4 +22,4 @@ In order to make face recognition systems more secure, we need to be able to det
 
 **Dataset** :  [Closed Eyes In The Wild (CEW) dataset](http://parnec.nuaa.edu.cn/_upload/tpl/02/db/731/template731/pages/xtan/ClosedEyeDatabases.html)
 
-**Model** : leNet-5 
+**Model** : LeNet-5 
