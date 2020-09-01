@@ -27,3 +27,6 @@ In order to make face recognition systems more secure, we need to be able to det
 ## Real Time Implementation
 Combine the two previous networks, and implementing real time feature using opencv. 
 
+**Idea** : We won't confirm the face if it's detected until the eyes blink.
+
+**Face detection task** : openCV pre-trained Haar-cascade classifier.

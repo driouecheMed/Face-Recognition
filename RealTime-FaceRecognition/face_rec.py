@@ -33,31 +33,27 @@ def init():
     images = []
     for direc, _, files in tqdm(os.walk(dataset)):
         for file in files:
-            #if file.endswith("jpg"):
             images.append(os.path.join(direc,file))
     return (model,face_detector, open_eyes_detector, left_eye_detector,right_eye_detector, video_capture, images) 
 
 
+# Load images from faces folder 
+# then encode the face into a 128-d embeddings vector
+# and attribute the name of the person to each encoding
 def process_and_encode(images):
     known_encodings = []
     known_names = []
     print("[LOG] Encoding faces ...")
     for image_path in tqdm(images):
-        # Load image
         image = cv2.imread(image_path)
-        # Convert it from BGR to RGB
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        # detect face in the image and get its location (square boxes coordinates)
         boxes = face_recognition.face_locations(image, model='hog')
-        # Encode the face into a 128-d embeddings vector
         encoding = face_recognition.face_encodings(image, boxes)
-        # the person's name is the name of the folder where the image comes from
         name = image_path.split(os.path.sep)[-1]
         name = name.rsplit('.', 1)[0]
         if len(encoding) > 0 : 
             known_encodings.append(encoding[0])
             known_names.append(name)
-
     return {"encodings": known_encodings, "names": known_names}
 
 
@@ -74,8 +70,7 @@ def isBlinking(history, maxFrames):
 
 def detect_and_display(model, video_capture, face_detector, open_eyes_detector, left_eye_detector, right_eye_detector, data, eyes_detected):
         frame = video_capture.read()
-        # resize the frame
-        frame = cv2.resize(frame, (0, 0), fx=0.6, fy=0.6)
+        frame = cv2.resize(frame, (0, 0), fx=1, fy=1)
 
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
