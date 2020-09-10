@@ -12,7 +12,7 @@ By comparing two such vectors, you can then determine if two pictures are of the
 
 **Loss**: Triplet loss
 
-<img src="FaceNet_Notebook/images/distance_kiank.png" style="width:680px;height:250px;">
+<img src="01_FaceNet_Notebook/images/distance_kiank.png" style="width:680px;height:250px;">
 
 ## Liveliness Net
 Face recognition systems can be circumvented simply by holding up a photo of a person to the face recognition camera.
@@ -29,4 +29,7 @@ Combine the two previous networks, and implementing real time feature using open
 
 **Idea** : We won't confirm the face if it's detected until the eyes blink.
 
+<img src="03_RealTime-FaceRecognition/01_conception/activity_diagram.png" style="width:680px;height:250px;">
+
 **Face detection task** : openCV pre-trained Haar-cascade classifier.
+
