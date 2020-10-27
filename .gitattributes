@@ -19,4 +19,5 @@
 *.pyo    binary
 
 # Jupyter notebook
+.ipynb linguist-documentation
 *.ipynb  diff=python
