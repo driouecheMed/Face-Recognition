@@ -19,4 +19,4 @@
 *.pyo    binary
 
 # Jupyter notebook
-*.ipynb  text
+*.ipynb  text diff=python
