@@ -21,3 +21,4 @@
 # Jupyter notebook
 .ipynb linguist-documentation
 *.ipynb  diff=python
+*.*      diff=python
